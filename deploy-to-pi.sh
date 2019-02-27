@@ -9,7 +9,7 @@ main() {
 	gofile="${1}"
   # utility is gofile without the '.go' extension
 	utility="${gofile%.*}"
-	GOOS=linux GOARCH=arm go build -v "${gofile}" && scp "${utility}" root@${RASPBERRY_PI}:bin
+	GOOS=linux GOARCH=arm go build -v "${gofile}" && scp "${utility}" ${RASPBERRY_PI}:bin
 	if [ $? -eq 0 ] ; then
 		echo "${utility} deployed"
 	fi
