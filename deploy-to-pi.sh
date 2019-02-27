@@ -13,6 +13,7 @@ main() {
 	if [ $? -eq 0 ] ; then
 		echo "${utility} deployed"
 	fi
+	#rm "${utility}"
 }
 
 usage() {
